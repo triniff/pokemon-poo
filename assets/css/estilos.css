@@ -6,14 +6,9 @@ h1 {
 	color: #F2AA41;
 }
 
-#ataque {
+#selector {
 	font-size: 19px;
 	color: #F2AA41;
-	width: 100%;
-}
-#pikachu, #charmander {
-	float: left;
-	padding: 40px;
 }
 
 img {

@@ -1,7 +1,6 @@
-function Pokemon(nombre,color,poderDeAtaque,tipo){
+function Pokemon(nombre,tipo,poderDeAtaque){
 	this.dataStore = [];
 	this.nombre = nombre
-	this.color = color
 	this.tipo = tipo
 
 	this.nivelDeAmistad = 0
@@ -10,7 +9,7 @@ function Pokemon(nombre,color,poderDeAtaque,tipo){
 	this.poderDeAtaque = poderDeAtaque
 
 	this.mostrarPokemon = function (){
-		return ("Hola, soy: " + this.nombre + " y soy de color: " + this.color + "<br>" +  "Tipo: " + this.tipo)
+		return ("Hola, soy: " + this.nombre +  "<br>" +  "Tipo: " + this.tipo)
 	}
 	this.aumentarAmistad = function (valor){
 		this.nivelDeAmistad += valor;
@@ -20,28 +19,47 @@ function Pokemon(nombre,color,poderDeAtaque,tipo){
 		pokemon.vida = pokemon.vida - this.poderDeAtaque;
 		return pokemon.vida;
 	}
-
-
 }
-
-var Pikachu = new Pokemon("Pikachu", "Amarillo", 50, "Eléctrico");
-var Charmander = new Pokemon("Charmander", "Rojo", 20, "Fuego");
-var Bulbasaur = new Pokemon("Bulbasaur", "Azul", 40, "Agua");
-var Psyduck = new Pokemon("Psyduck", "Amarillo", 10, "Psiquico")
 
 function pelear(){
-	var pokemon1 = poke1.value;
-	var pokemon2 = poke2.value;
-	
-	if(pokemon1 == pokemon2){
-		alert("nu")
-	}
+    var vs = document.getElementById("vs");
+    var poke1 =document.getElementById("poke1").value;
+    var poke2 =document.getElementById("poke2").value;
+    var valorAt = prompt("Ingresa un poder de ataque");
+    var atac1 = new Pokemon (poke1,"tipo",valorAt);
+    var atac2 = new Pokemon(poke2,"tipo 2",5);
 
-	pokemon1.atacar(pokemon2);
-	vs.innerHTML = "Pikachu a atacado a Charmander" + "<br>" + "la vida de Charmander es " + pokemon2.vida
+    atac1.atacar(atac2);
+
+    vs.innerHTML = atac1.nombre +" atacó a " + atac2.nombre + " y " + atac2.nombre + " tiene una vida de: " + atac2.vida;
+
+
 }
 
+//* Version proximamente xD
 /*
+var pokemones = [];
+
+function addPokemon(nombre,tipo,poderDeAtaque){
+	var nuevo = new Pokemon;
+	pokemones.push(nuevo);
+}
+addPokemon("Pikachu", "Eléctrico" , 50);
+addPokemon("Charmander", "Fuego", 20);
+addPokemon("Bulbasaur", "Agua", 40);
+addPokemon("Psyduck", "Psiquico", 10)
+
+function pelear(){
+	var primero = poke1.value;
+	var segundo = poke2.value;
+	var pelea;
+	for (var i = 1; i < pokemones.length+1; i++) {
+		return primero = pokemones[i];
+	}
+
+}
+
+
 Pikachu.atacar(Charmander);
 vs.innerHTML = "Pikachu a atacado a Charmander" + "<br>" + "la vida de Charmander es " + Charmander.vida;
 
@@ -49,24 +67,4 @@ vs.innerHTML = Pikachu.mostrarPokemon() + "<br>" + "Nivel de amistad: " + Pikach
 datosCharmander.innerHTML = Charmander.mostrarPokemon() + "<br>" + "Nivel de amistad: " + Charmander.aumentarAmistad(20);
 ataque.innerHTML = "Pikachu a atacado a Charmander" + "<br>" + "la vida de Charmander es " + Charmander.vida
 
-
-var ide1 = document.getElementsByClassName("pik");
-var nombrePok1 = Pikachu.nombre;
-var nodoText1 = document.createTextNode(nombrePok1);
-ide1.appendChild(nodoText1);
-
-var ide2 = document.getElementsByClassName("char");
-var nombrePok2 = Charmander.nombre;
-var nodoText2 = document.createTextNode(nombrePok2);
-ide2.appendChild(nodoText2);
-
-var ide3 = document.getElementsByClassName("bul");
-var nombrePok3 = Bulbasaur.nombre;
-var nodoText3 = document.createTextNode(nombrePok3);
-ide3.appendChild(nodoText3);
-
-var ide4 = document.getElementsByClassName("ps");
-var nombrePok4 = Psyduck.nombre;
-var nodoText4 = document.createTextNode(nombrePok4);
-ide4.appendChild(nodoText4);
 */

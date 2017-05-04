@@ -24,24 +24,18 @@
 	</div>
 	-->
 	<div id="selector">
-	<select id="poke1">
-	  <option  hidden selected> Seleccione un pokemon</option>
-	  <option value="Pikachu">Pikachu</option>
-	  <option value="Charmander">Charmander</option>
-	  <option value="Bulbasaur">Bulbasaur</option>
-	  <option value="Psyduck">Psyduck</option>
-	</select>
-	<h3>VS</h3>
-	<select id="poke2">
-	  <option  hidden selected> Seleccione un pokemon</option>
-	  <option value="Pikachu">Pikachu</option>
-	  <option value="Charmander">Charmander</option>
-	  <option value="Bulbasaur">Bulbasaur</option>
-	  <option value="Psyduck">Psyduck</option>
-	</select>
-	<button type="button" onclick="pelear()">Pelear</button>
-	</div>
-	<div>
+	  <select name="poke1" id="poke1">
+        <option  hidden selected>Selecciona tu pokémon</option>
+        <option class="electrico" value="Pikachu">Pikachu</option>
+        <option class="fuego" value="Charmander">Charmander</option>
+    </select>
+    	<h3>VS</h3>
+    <select name="poke2" id="poke2">
+        <option  hidden selected>Selecciona tu pokémon</option>
+        <option class="electrico" value="Pikachu">Pikachu</option>
+        <option class="fuego" value="Charmander">Charmander</option>
+    </select>
+    <button type="button" onclick="pelear()">Pelear</button>
 		<h2 id="vs"></h2>
 	</div>
 	<script type="text/javascript" src="assets/js/main.js"></script>
