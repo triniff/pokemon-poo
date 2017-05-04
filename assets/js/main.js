@@ -23,9 +23,13 @@ function Pokemon(nombre,color,poderDeAtaque,tipo){
 
 const Pikachu = new Pokemon("Pikachu", "Amarillo", 50, "Eléctrico");
 const Charmander = new Pokemon("Charmander", "Rojo", 20, "Fuego");
+const Bulbasaur = new Pokemon("Bulbasaur", "Azul", 40, "Agua");
+const Psyduck = new Pokemon("Psyduck", "Amarillo", 10, "Psiquico")
 
-
-datosPikachu.innerHTML = Pikachu.mostrarPokemon() + "<br>" + "Nivel de amistad: " + Pikachu.aumentarAmistad(50);
+Pikachu.atacar(Charmander);
+vs.innerHTML = "Pikachu a atacado a Charmander" + "<br>" + "la vida de Charmander es " + Charmander.vida;
+/*
+vs.innerHTML = Pikachu.mostrarPokemon() + "<br>" + "Nivel de amistad: " + Pikachu.aumentarAmistad(50);
 datosCharmander.innerHTML = Charmander.mostrarPokemon() + "<br>" + "Nivel de amistad: " + Charmander.aumentarAmistad(20);
 Pikachu.atacar(Charmander);
-ataque.innerHTML = "Pikachu a atacado a Charmander" + "<br>" + "la vida de Charmander es " + Charmander.vida 
+ataque.innerHTML = "Pikachu a atacado a Charmander" + "<br>" + "la vida de Charmander es " + Charmander.vida */

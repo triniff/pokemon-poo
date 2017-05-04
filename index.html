@@ -7,7 +7,8 @@
 </head>
 <body>
 	<h1>Pokemón</h1>
-	<div id="pikachu">
+	<!--
+		<div id="pikachu">
 		<h3>Pikachu</h3>
 		<img src="assets/img/pikachu.png" alt="placeholder+image">
 		<p id="datosPikachu"></p>
@@ -20,6 +21,26 @@
 	<div id="batalla">
 	<img src="assets/img/maxresdefault.jpg">
 	<h2 id="ataque"></h2>
+	</div>
+	-->
+	<div id="selector">
+	<select id="poke1">
+	  <option value="pikachu">Pikachu</option>
+	  <option value="charmander">Charmander</option>
+	  <option value="bulbasaur">Bulbasaur</option>
+	  <option value="psyduck">Psyduck</option>
+	</select>
+	<h3>VS</h3>
+	<select id="poke2">
+	  <option value="pikachu">Pikachu</option>
+	  <option value="charmander">Charmander</option>
+	  <option value="bulbasaur">Bulbasaur</option>
+	  <option value="psyduck">Psyduck</option>
+	</select>
+	<button type="button" onclick="Pokemon.atacar()">Pelear</button>
+	</div>
+	<div>
+		<h2 id="vs"></h2>
 	</div>
 	<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
