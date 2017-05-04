@@ -1,0 +1,22 @@
+body {
+	font-family: Helvetica;
+	color: #8C837B;
+}
+h1 {
+	color: #F2AA41;
+}
+
+#ataque {
+	font-size: 19px;
+	color: #F2AA41;
+	width: 100%;
+}
+#pikachu, #charmander {
+	float: left;
+	padding: 40px;
+}
+
+img {
+	width: 300px;
+	height: auto;
+}
